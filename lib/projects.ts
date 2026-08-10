@@ -21,7 +21,7 @@ export const projects: Project[] = [
       "Document field-extraction pipeline with rule-based validation, benchmarked on ICDAR 2019 SROIE.",
     tags: ["Python", "OCR", "Rule Engine", "ICDAR SROIE"],
     status: "live",
-    subdomainUrl: "https://docfield.example.com",
+    subdomainUrl: "https://document.kenzychew.com",
   },
   {
     slug: "gofetch",
@@ -30,7 +30,7 @@ export const projects: Project[] = [
       "RAG pipeline built from scratch — hybrid search, cross-encoder re-ranking, a knowledge graph, and streaming answers with inline citations.",
     tags: ["Hybrid Search", "Cross-Encoder", "Knowledge Graph", "Streaming"],
     status: "live",
-    subdomainUrl: "https://gofetch.example.com",
+    subdomainUrl: "https://rag.kenzychew.com",
   },
   {
     slug: "rocketml",
@@ -39,7 +39,7 @@ export const projects: Project[] = [
       "NLP model launchpad — FastAPI serving, Docker, CI to GHCR, MLflow tracking, Prometheus/Grafana, Helm on Kubernetes.",
     tags: ["FastAPI", "Docker", "MLflow", "Prometheus", "Kubernetes", "Helm"],
     status: "live",
-    subdomainUrl: "https://rocketml.example.com",
+    subdomainUrl: "https://rocket.kenzychew.com",
   },
   {
     slug: "gotparking",
@@ -47,6 +47,6 @@ export const projects: Project[] = [
     blurb: "Singapore parking-availability lookup, updated in near real time.",
     tags: ["Next.js", "TypeScript", "Geospatial"],
     status: "live",
-    subdomainUrl: "https://gotparking.example.com",
+    subdomainUrl: "https://parking.kenzychew.com",
   },
 ];
