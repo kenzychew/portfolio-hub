@@ -30,7 +30,7 @@ export const projects: Project[] = [
       "RAG pipeline built from scratch — hybrid search, cross-encoder re-ranking, a knowledge graph, and streaming answers with inline citations.",
     tags: ["Hybrid Search", "Cross-Encoder", "Knowledge Graph", "Streaming"],
     status: "live",
-    subdomainUrl: "https://rag.kenzychew.com",
+    subdomainUrl: "https://fetch.kenzychew.com",
   },
   {
     slug: "rocketml",
