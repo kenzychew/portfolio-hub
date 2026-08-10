@@ -43,6 +43,13 @@ the code alone.
   to `main`. `public/CNAME` pins the custom domain — GitHub Pages copies it
   verbatim from `public/` into `out/`. No API routes or `next/image` usage,
   so nothing in this app is currently incompatible with static export.
+- If `npm ci` fails in CI with `Missing: <pkg> from lock file` for optional
+  platform packages (e.g. `@emnapi/*`, other napi-rs/wasm32-wasi shims
+  pulled in transitively by Tailwind v4's `lightningcss`), don't hand-edit
+  `package-lock.json` — a partial edit tends to leave other optional-dep
+  entries mis-hoisted and CI fails again on the next package. Delete both
+  `node_modules/` and `package-lock.json`, run a clean `npm install`, then
+  verify with `npm ci` before committing the regenerated lockfile.
 
 ## Maintaining this file
 
