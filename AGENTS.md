@@ -38,6 +38,11 @@ the code alone.
   is ready.
 - `prefers-reduced-motion` is handled globally in `app/globals.css` (freezes
   CSS animations, including the hero drift) rather than per-component.
+- Deployed as a static export (`output: "export"` in `next.config.ts`) to
+  GitHub Pages via `.github/workflows/deploy-pages.yml`, triggered on push
+  to `main`. `public/CNAME` pins the custom domain — GitHub Pages copies it
+  verbatim from `public/` into `out/`. No API routes or `next/image` usage,
+  so nothing in this app is currently incompatible with static export.
 
 ## Maintaining this file
 
