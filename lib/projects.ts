@@ -49,4 +49,13 @@ export const projects: Project[] = [
     status: "live",
     subdomainUrl: "https://parking.kenzychew.com",
   },
+  {
+    slug: "cineloops",
+    title: "Cineloops",
+    blurb:
+      "Image-to-video pipeline with SAM2 segmentation and Gemini prompt refinement, gated by a bring-your-own-key Replicate flow so visitors cover their own generation cost.",
+    tags: ["Next.js", "FastAPI", "SAM2", "Replicate", "BYOK"],
+    status: "live",
+    subdomainUrl: "https://cineloops.vercel.app",
+  },
 ];
