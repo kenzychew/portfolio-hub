@@ -1,10 +1,16 @@
+import { projects } from "@/lib/projects";
+
 type Stat = {
   value: string;
   label: string;
 };
 
+const liveProjectCount = projects.filter(
+  (project) => project.status === "live",
+).length;
+
 const stats: Stat[] = [
-  { value: "4", label: "Live Projects" },
+  { value: String(liveProjectCount), label: "Live Projects" },
   { value: "AIAP", label: "Certified" },
   { value: "746+", label: "Automated Tests" },
 ];
