@@ -9,24 +9,18 @@ type Role = {
 
 const roles: Role[] = [
   {
-    period: "2024 — Present",
-    title: "Applied ML / AI Engineer",
-    org: "Placeholder — Company Name",
+    period: "Sep 2025 — Mar 2026",
+    title: "Associate AI Engineer",
+    org: "AI Singapore (AIAP)",
     summary:
-      "Placeholder summary. Real role details, dates, and impact metrics go here.",
+      "Delivered a GenAI video generation platform for a global FMCG company as part of a cohort, placing top 6 of 17 projects. Built a custom pipeline on Azure A100 infrastructure, with ComfyUI nodes for image decomposition, multi-provider video generation, and per-job workflow selection, then containerized 5 services across a 4-node GPU cluster with CI/CD. Established human ground truth for the evaluation suite by coordinating batch experiments and annotating 380 videos, benchmarked against VBench and VQA metrics.",
   },
   {
-    period: "2022 — 2024",
-    title: "Placeholder Role",
-    org: "Placeholder — Company Name",
+    period: "Jun 2011 — Apr 2024",
+    title: "Private Tutor",
+    org: "Self-Employed",
     summary:
-      "Placeholder summary. Structure of this timeline is final; copy is not.",
-  },
-  {
-    period: "2020 — 2022",
-    title: "Placeholder Role",
-    org: "Placeholder — Company Name",
-    summary: "Placeholder summary for an earlier role or project.",
+      "Delivered personalized one-on-one Mathematics instruction, continuously adapting teaching strategy to individual student needs, and developed the ability to break complex concepts into clear explanations for diverse audiences.",
   },
 ];
 

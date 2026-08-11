@@ -1,3 +1,14 @@
+type Stat = {
+  value: string;
+  label: string;
+};
+
+const stats: Stat[] = [
+  { value: "4", label: "Live Projects" },
+  { value: "AIAP", label: "Certified" },
+  { value: "746+", label: "Automated Tests" },
+];
+
 export default function Hero() {
   return (
     <section
@@ -37,7 +48,26 @@ export default function Hero() {
         <p className="mt-6 max-w-xl font-body text-base text-bg/70 sm:text-lg">
           Document extraction, retrieval-augmented generation, and the
           serving infrastructure that keeps applied AI running in production.
+          Certified through AI Singapore&apos;s AI Apprenticeship Programme,
+          I recently helped deliver a GenAI video generation platform for a
+          global FMCG company on Azure GPU infrastructure, integrating
+          multi-provider video generation models and owning the MLOps
+          around it: CI/CD, observability, and evaluation. Comfortable
+          across the stack, from Python backends and containerized
+          deployments to React frontends.
         </p>
+        <dl className="mt-10 flex flex-wrap gap-x-8 gap-y-4">
+          {stats.map((stat) => (
+            <div key={stat.label}>
+              <dt className="font-mono text-xs uppercase tracking-[0.2em] text-bg/60">
+                {stat.label}
+              </dt>
+              <dd className="mt-1 font-display text-xl text-bg sm:text-2xl">
+                {stat.value}
+              </dd>
+            </div>
+          ))}
+        </dl>
       </div>
     </section>
   );

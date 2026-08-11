@@ -1,9 +1,9 @@
 import Section from "./Section";
 
 const links = [
-  { label: "Email", href: "#" },
-  { label: "GitHub", href: "#" },
-  { label: "LinkedIn", href: "#" },
+  { label: "Email", href: "mailto:kenzychew@gmail.com" },
+  { label: "GitHub", href: "https://github.com/kenzychew" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/kenzychew/" },
 ];
 
 export default function Contact() {
@@ -11,8 +11,8 @@ export default function Contact() {
     <Section id="contact" number="05" title="Contact" className="border-b">
       <div className="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
         <p className="max-w-md font-body text-lg leading-relaxed text-fg-muted sm:text-xl">
-          Open to applied ML/AI roles and collaborations. Reach out — links
-          below are placeholders until real contact details are wired up.
+          Open to applied ML/AI roles and collaborations. Reach out through
+          any of the links below.
         </p>
         <ul className="flex flex-col gap-3 font-mono text-sm uppercase tracking-widest">
           {links.map((link) => (
