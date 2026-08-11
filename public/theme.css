@@ -1,0 +1,93 @@
+/*
+ * Shared design tokens + base rules for kenzychew.com demo subdomains
+ * (FastAPI + plain HTML projects). Served as a static asset at
+ * https://kenzychew.com/theme.css — see AGENTS.md for the full contract
+ * and the font-loading <link> snippet this file depends on.
+ *
+ * Tokens are copied verbatim from this repo's app/globals.css :root block.
+ * This file declares fonts as CSS variables only — it does not load them;
+ * consuming pages must add their own Google Fonts <link> tags.
+ */
+
+:root {
+  --color-bg: #f6f1e7;
+  --color-bg-raised: #efe8d9;
+  --color-fg: #1c1917;
+  --color-fg-muted: #5c564c;
+  --color-border: #ddd3bf;
+  --color-accent: #b8451f;
+  --color-accent-fg: #f6f1e7;
+  --color-accent-ink: #8a3216;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Public Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-body);
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+a {
+  color: var(--color-accent-ink);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Utility classes — prefixed kz- to avoid colliding with a consuming
+   project's own class names. */
+
+/* Raised card container: query boxes, result cards, map/list panels. */
+.kz-panel {
+  background: var(--color-bg-raised);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+}
+
+/* Small muted status/helper text, e.g. "Loading forecast…", timestamps. */
+.kz-status-note {
+  color: var(--color-fg-muted);
+  font-size: 0.85rem;
+}
+
+/* Footer attribution text. */
+.kz-attribution {
+  color: var(--color-fg-muted);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+/* Eyebrow text / section labels: small-caps monospace. */
+.kz-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-fg-muted);
+}
