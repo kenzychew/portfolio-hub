@@ -16,7 +16,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "docfield-extract",
-    title: "docfield-extract",
+    title: "DocFieldExtract",
     blurb:
       "Document field-extraction pipeline with rule-based validation, benchmarked on ICDAR 2019 SROIE.",
     tags: ["Python", "OCR", "Rule Engine", "ICDAR SROIE"],
@@ -25,7 +25,7 @@ export const projects: Project[] = [
   },
   {
     slug: "gofetch",
-    title: "gofetch",
+    title: "GoFetch",
     blurb:
       "RAG pipeline built from scratch — hybrid search, cross-encoder re-ranking, a knowledge graph, and streaming answers with inline citations.",
     tags: ["Hybrid Search", "Cross-Encoder", "Knowledge Graph", "Streaming"],

@@ -31,6 +31,11 @@ the code alone.
 - Project data is centralized in `lib/projects.ts` (typed `Project[]`,
   including a `subdomainUrl` placeholder per project). Swapping in real
   domains later is a one-file edit there.
+- Project display names (the `title` field in `lib/projects.ts`, and
+  anywhere else a project is named in prose/UI copy) are PascalCase
+  compounds with no spaces or hyphens — each meaningful word segment
+  capitalized, e.g. `RocketML`, `GotParking`, `Cineloops`, `DocFieldExtract`,
+  `GoFetch`. `slug` and `subdomainUrl` are unaffected by this convention.
 - The Hero background is a CSS/SVG placeholder (`.hero-bg` /
   `.hero-grain` / `.hero-blob-*` in `app/globals.css`, rendered by
   `components/Hero.tsx`) — no real video was sourced for v1. See
