@@ -15,8 +15,8 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "docfield-extract",
-    title: "DocFieldExtract",
+    slug: "docextract",
+    title: "DocExtract",
     blurb:
       "Document field-extraction pipeline with rule-based validation, benchmarked on ICDAR 2019 SROIE.",
     tags: ["Python", "OCR", "Rule Engine", "ICDAR SROIE"],
