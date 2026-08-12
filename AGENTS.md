@@ -34,7 +34,7 @@ the code alone.
 - Project display names (the `title` field in `lib/projects.ts`, and
   anywhere else a project is named in prose/UI copy) are PascalCase
   compounds with no spaces or hyphens — each meaningful word segment
-  capitalized, e.g. `RocketML`, `GotParking`, `Cineloops`, `DocFieldExtract`,
+  capitalized, e.g. `RocketML`, `GotParking`, `Cineloops`, `DocExtract`,
   `GoFetch`. `slug` and `subdomainUrl` are unaffected by this convention.
 - The Hero background is a CSS/SVG placeholder (`.hero-bg` /
   `.hero-grain` / `.hero-blob-*` in `app/globals.css`, rendered by
