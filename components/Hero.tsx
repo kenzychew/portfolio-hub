@@ -12,7 +12,6 @@ const liveProjectCount = projects.filter(
 const stats: Stat[] = [
   { value: String(liveProjectCount), label: "Live Projects" },
   { value: "AIAP", label: "Certified" },
-  { value: "746+", label: "Automated Tests" },
 ];
 
 export default function Hero() {
@@ -22,23 +21,20 @@ export default function Hero() {
       className="relative flex min-h-[92vh] items-end overflow-hidden"
     >
       {/*
-        v1 placeholder background: no real hero footage sourced yet (see PR
-        description for the swap-in plan). Once public/video/hero-loop.mp4 +
-        hero-poster.jpg exist, replace this div with:
-          <video autoPlay muted loop playsInline poster="/video/hero-poster.jpg"
-                 className="absolute inset-0 h-full w-full object-cover">
-            <source src="/video/hero-loop.mp4" type="video/mp4" />
-          </video>
-        gated behind a prefers-reduced-motion check that renders the poster
-        image alone when motion is reduced.
+        v1 placeholder photo: no real portrait sourced yet (see
+        public/photo/README.md for the swap-in plan). Once
+        public/photo/hero-portrait.jpg exists, replace this div with:
+          <img src="/photo/hero-portrait.jpg" alt=""
+               className="hero-photo absolute inset-0 h-full w-full object-cover" />
+        The hero-photo class carries the slow scale drift and already
+        respects prefers-reduced-motion.
       */}
-      <div className="hero-bg absolute inset-0" aria-hidden="true">
-        <div className="hero-blob-a absolute -left-1/4 top-0 h-[70vh] w-[70vh] rounded-full bg-accent/30 blur-[120px]" />
-        <div className="hero-blob-b absolute -right-1/4 bottom-0 h-[60vh] w-[60vh] rounded-full bg-[#8a6a4a]/30 blur-[120px]" />
-        <div className="hero-grain absolute inset-0 opacity-[0.06] mix-blend-overlay" />
-      </div>
+      <div
+        className="hero-photo hero-photo-placeholder absolute inset-0"
+        aria-hidden="true"
+      />
 
-      {/* Scrim: keeps the headline legible over the animated backdrop. */}
+      {/* Scrim: keeps the headline legible over the photo. */}
       <div
         className="absolute inset-0 bg-gradient-to-t from-[#161210] via-[#161210]/55 to-[#161210]/10"
         aria-hidden="true"
