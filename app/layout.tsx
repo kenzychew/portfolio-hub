@@ -19,7 +19,7 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio — Applied ML/AI Engineer",
+  title: "Kenzychew | Applied AI Engineer",
   description:
     "Applied ML/AI engineering portfolio — document extraction, retrieval-augmented generation, and production ML serving.",
 };
