@@ -57,52 +57,38 @@ body {
 }
 
 /*
- * Hero background placeholder: no real footage sourced yet for this v1
- * (see PR description). Slow drifting warm gradients + a grain overlay
- * stand in for public/video/hero-loop.mp4, honoring the same reduced-motion
- * contract a real <video> would: prefers-reduced-motion freezes the drift
- * via the rule above and CSS below renders a static frame instead.
+ * Hero photo placeholder: no real portrait sourced yet for this v1 (see
+ * public/photo/README.md for the swap-in plan). A warm gradient stands in
+ * for public/photo/hero-portrait.jpg, color-graded to the existing palette
+ * tokens. The slow scale drift honors the same reduced-motion contract a
+ * real photo would: prefers-reduced-motion freezes it via the rule above,
+ * and the override below renders a static frame instead of just slowing
+ * the drift down.
  */
-@keyframes hero-drift-a {
-  0%,
+@keyframes hero-photo-drift {
+  0% {
+    transform: scale(1.04);
+  }
   100% {
-    transform: translate3d(-6%, -4%, 0) scale(1);
-  }
-  50% {
-    transform: translate3d(6%, 8%, 0) scale(1.18);
+    transform: scale(1.14);
   }
 }
 
-@keyframes hero-drift-b {
-  0%,
-  100% {
-    transform: translate3d(8%, 6%, 0) scale(1.12);
-  }
-  50% {
-    transform: translate3d(-8%, -8%, 0) scale(1);
-  }
+.hero-photo-placeholder {
+  background: radial-gradient(
+      120% 90% at 25% 15%,
+      rgba(184, 69, 31, 0.4) 0%,
+      transparent 55%
+    ),
+    linear-gradient(165deg, #efe8d9 0%, #8a6a4a 45%, #241d17 100%);
 }
 
-.hero-bg {
-  background: linear-gradient(160deg, #2a231c 0%, #241d17 55%, #1c1712 100%);
-}
-
-.hero-blob-a {
-  animation: hero-drift-a 26s ease-in-out infinite;
-}
-
-.hero-blob-b {
-  animation: hero-drift-b 32s ease-in-out infinite;
-}
-
-.hero-grain {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-size: 180px 180px;
+.hero-photo {
+  animation: hero-photo-drift 36s ease-in-out infinite alternate;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-blob-a,
-  .hero-blob-b {
+  .hero-photo {
     animation: none;
   }
 }

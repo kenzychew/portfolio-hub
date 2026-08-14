@@ -20,7 +20,7 @@ const roles: Role[] = [
     title: "Private Tutor",
     org: "Self-Employed",
     summary:
-      "Delivered personalized one-on-one Mathematics instruction, continuously adapting teaching strategy to individual student needs, and developed the ability to break complex concepts into clear explanations for diverse audiences.",
+      "Taught Mathematics one-on-one for 13 years. Every student needed a different way into the same idea, good practice for making complex things click.",
   },
 ];
 
