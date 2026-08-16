@@ -18,7 +18,7 @@ export const projects: Project[] = [
     slug: "docextract",
     title: "DocExtract",
     blurb:
-      "Document field-extraction pipeline with rule-based validation, benchmarked on ICDAR 2019 SROIE.",
+      "Document field-extraction with rule-based validation, benchmarked against the public ICDAR 2019 SROIE dataset.",
     tags: ["Python", "OCR", "Rule Engine", "ICDAR SROIE"],
     status: "live",
     subdomainUrl: "https://document.kenzychew.com",
@@ -27,7 +27,7 @@ export const projects: Project[] = [
     slug: "gofetch",
     title: "GoFetch",
     blurb:
-      "RAG pipeline built from scratch — hybrid search, cross-encoder re-ranking, a knowledge graph, and streaming answers with inline citations.",
+      "RAG built from scratch: hybrid search, cross-encoder re-ranking, a knowledge graph, and streaming answers with inline citations.",
     tags: ["Hybrid Search", "Cross-Encoder", "Knowledge Graph", "Streaming"],
     status: "live",
     subdomainUrl: "https://fetch.kenzychew.com",
@@ -36,7 +36,7 @@ export const projects: Project[] = [
     slug: "rocketml",
     title: "RocketML",
     blurb:
-      "NLP model launchpad — FastAPI serving, Docker, CI to GHCR, MLflow tracking, Prometheus/Grafana, Helm on Kubernetes.",
+      "An NLP model-serving platform with real monitoring: FastAPI, Docker, CI to GHCR, MLflow tracking, Prometheus/Grafana, Helm on Kubernetes.",
     tags: ["FastAPI", "Docker", "MLflow", "Prometheus", "Kubernetes", "Helm"],
     status: "live",
     subdomainUrl: "https://rocket.kenzychew.com",
@@ -44,7 +44,8 @@ export const projects: Project[] = [
   {
     slug: "gotparking",
     title: "GotParking",
-    blurb: "Singapore parking-availability lookup, updated in near real time.",
+    blurb:
+      "A parking-forecast model for Singapore that has to beat a real baseline before it's allowed to ship.",
     tags: ["Next.js", "TypeScript", "Geospatial"],
     status: "live",
     subdomainUrl: "https://parking.kenzychew.com",
