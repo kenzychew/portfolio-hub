@@ -20,18 +20,10 @@ export default function Hero() {
       id="top"
       className="relative flex min-h-[92vh] items-end overflow-hidden"
     >
-      {/*
-        v1 placeholder photo: no real portrait sourced yet (see
-        public/photo/README.md for the swap-in plan). Once
-        public/photo/hero-portrait.jpg exists, replace this div with:
-          <img src="/photo/hero-portrait.jpg" alt=""
-               className="hero-photo absolute inset-0 h-full w-full object-cover" />
-        The hero-photo class carries the slow scale drift and already
-        respects prefers-reduced-motion.
-      */}
-      <div
-        className="hero-photo hero-photo-placeholder absolute inset-0"
-        aria-hidden="true"
+      <img
+        src="/photo/hero-portrait.jpg"
+        alt=""
+        className="hero-photo absolute inset-0 h-full w-full object-cover"
       />
 
       {/* Scrim: keeps the headline legible over the photo. */}

@@ -36,12 +36,13 @@ the code alone.
   compounds with no spaces or hyphens — each meaningful word segment
   capitalized, e.g. `RocketML`, `GotParking`, `Cineloops`, `DocExtract`,
   `GoFetch`. `slug` and `subdomainUrl` are unaffected by this convention.
-- The Hero is portrait-led: a large-format photo is the dominant visual,
-  currently a CSS gradient placeholder (`.hero-photo-placeholder` /
-  `.hero-photo` in `app/globals.css`, rendered by `components/Hero.tsx`) —
-  no real photo was sourced for v1. See `public/photo/README.md` for the
-  exact swap-in steps when the real photo is ready. `public/video/README.md`
-  documents an earlier, unused ambient-video concept kept for reference.
+- The Hero is portrait-led: `public/photo/hero-portrait.jpg` renders
+  full-bleed via `<img className="hero-photo ...">` in
+  `components/Hero.tsx` (see `public/photo/README.md` for the original
+  swap-in plan this followed). The unused `.hero-photo-placeholder` CSS
+  gradient remains in `app/globals.css` for reference but is no longer
+  rendered. `public/video/README.md` documents an earlier, unused
+  ambient-video concept kept for reference.
 - `prefers-reduced-motion` is handled globally in `app/globals.css` (freezes
   CSS animations, including the hero drift) rather than per-component.
 - Deployed as a static export (`output: "export"` in `next.config.ts`) to
