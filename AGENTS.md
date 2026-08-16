@@ -36,15 +36,15 @@ the code alone.
   compounds with no spaces or hyphens — each meaningful word segment
   capitalized, e.g. `RocketML`, `GotParking`, `Cineloops`, `DocExtract`,
   `GoFetch`. `slug` and `subdomainUrl` are unaffected by this convention.
-- The Hero is portrait-led: `public/photo/hero-portrait.jpg` renders
-  full-bleed via `<img className="hero-photo ...">` in
-  `components/Hero.tsx` (see `public/photo/README.md` for the original
-  swap-in plan this followed). The unused `.hero-photo-placeholder` CSS
-  gradient remains in `app/globals.css` for reference but is no longer
-  rendered. `public/video/README.md` documents an earlier, unused
-  ambient-video concept kept for reference.
-- `prefers-reduced-motion` is handled globally in `app/globals.css` (freezes
-  CSS animations, including the hero drift) rather than per-component.
+- The Hero is a two-column layout: text (eyebrow, headline, subhead,
+  stats) on the left, `public/photo/hero-portrait.jpg` in a bounded
+  circular frame (`rounded-full`) on the right, stacking vertically on
+  narrow viewports. See `components/Hero.tsx`. There is no full-bleed
+  background image or dark scrim — the Hero uses the site's normal light
+  theme like every other section. `public/video/README.md` documents an
+  earlier, unused ambient-video concept kept for reference.
+- `prefers-reduced-motion` is handled globally in `app/globals.css`
+  (freezes CSS animations) rather than per-component.
 - Deployed as a static export (`output: "export"` in `next.config.ts`) to
   GitHub Pages via `.github/workflows/deploy-pages.yml`, triggered on push
   to `main`. `public/CNAME` pins the custom domain — GitHub Pages copies it
