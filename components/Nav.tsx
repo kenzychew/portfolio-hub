@@ -13,7 +13,7 @@ export default function Nav() {
           href="#top"
           className="shrink-0 font-mono text-sm font-medium tracking-tight text-fg"
         >
-          portfolio.hub
+          kenzychew
         </a>
         <ul className="flex min-w-0 items-center gap-4 overflow-x-auto font-mono text-xs uppercase tracking-widest text-fg-muted sm:gap-7">
           {links.map((link) => (
