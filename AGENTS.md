@@ -58,7 +58,7 @@ the code alone.
   in `components/blog/` (`StatGrid`, `Pipeline`, `BoundaryBox`, `DecisionBox`,
   `WarStory`, `ResultsTable`, `LimitsList`). Adding a post means: an entry in
   `lib/blog.ts`, a new body file in `app/blog/posts/`, and a matching key in
-  the `postBodies` lookup in `app/blog/[slug]/page.tsx` — the structural
+  the `postBodies` lookup in `app/blog/[slug]/page.tsx`; the structural
   components themselves shouldn't need changes.
 - If `npm ci` fails in CI with `Missing: <pkg> from lock file` for optional
   platform packages (e.g. `@emnapi/*`, other napi-rs/wasm32-wasi shims
