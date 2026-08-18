@@ -138,6 +138,14 @@ export default function GoFetchPost() {
         ]}
       />
 
+      <p className="mb-4 text-[15.5px] leading-relaxed text-fg">
+        Writing every stage by hand here was mostly a way to actually
+        understand what&apos;s happening at each step of a RAG pipeline. Next
+        time I&apos;d probably reach for LangChain, LangGraph, or CrewAI to
+        move faster, now that I know exactly what they&apos;re abstracting
+        away underneath.
+      </p>
+
       <StackLine
         items={[
           "Python",
