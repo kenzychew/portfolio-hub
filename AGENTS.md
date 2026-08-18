@@ -50,6 +50,16 @@ the code alone.
   to `main`. `public/CNAME` pins the custom domain — GitHub Pages copies it
   verbatim from `public/` into `out/`. No API routes or `next/image` usage,
   so nothing in this app is currently incompatible with static export.
+- The blog lives at `/blog` (index) and `/blog/[slug]` (post), static-exported
+  via `generateStaticParams` in `app/blog/[slug]/page.tsx`. Post metadata is
+  centralized in `lib/blog.ts` (typed `BlogPostMeta[]`, mirroring how
+  `lib/projects.ts` centralizes project data); each post's body is its own
+  file under `app/blog/posts/` built from the generic structural components
+  in `components/blog/` (`StatGrid`, `Pipeline`, `BoundaryBox`, `DecisionBox`,
+  `WarStory`, `ResultsTable`, `LimitsList`). Adding a post means: an entry in
+  `lib/blog.ts`, a new body file in `app/blog/posts/`, and a matching key in
+  the `postBodies` lookup in `app/blog/[slug]/page.tsx`; the structural
+  components themselves shouldn't need changes.
 - If `npm ci` fails in CI with `Missing: <pkg> from lock file` for optional
   platform packages (e.g. `@emnapi/*`, other napi-rs/wasm32-wasi shims
   pulled in transitively by Tailwind v4's `lightningcss`), don't hand-edit
