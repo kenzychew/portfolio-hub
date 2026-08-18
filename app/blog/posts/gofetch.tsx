@@ -133,7 +133,7 @@ export default function GoFetchPost() {
           {
             title: '"Built from scratch" has one asterisk.',
             description:
-              "Chunking still uses LangChain's text splitter. Everything else, retrieval, fusion, reranking, generation, the graph, I wrote myself.",
+              "Chunking still uses LangChain's text splitter. Everything else, retrieval, fusion, reranking, generation, the graph, was written from scratch.",
           },
         ]}
       />
