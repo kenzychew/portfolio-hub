@@ -2,6 +2,8 @@ import Nav from "@/components/Nav";
 import PostCard from "@/components/blog/PostCard";
 import { posts } from "@/lib/blog";
 
+const sortedPosts = [...posts].sort((a, b) => b.date.localeCompare(a.date));
+
 export default function BlogIndexPage() {
   return (
     <>
@@ -17,7 +19,7 @@ export default function BlogIndexPage() {
             </h1>
           </div>
           <div className="flex flex-col gap-3">
-            {posts.map((post) => (
+            {sortedPosts.map((post) => (
               <PostCard key={post.slug} post={post} />
             ))}
           </div>
