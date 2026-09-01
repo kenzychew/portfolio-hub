@@ -9,11 +9,18 @@ type Role = {
 
 const roles: Role[] = [
   {
+    period: "Mar 2026 — Present",
+    title: "AI Engineer",
+    org: "Independent Projects",
+    summary:
+      "Building and maintaining 5 AI/ML systems in production, covering document extraction, forecasting, retrieval, video generation, and model serving — the projects on this site.",
+  },
+  {
     period: "Sep 2025 — Mar 2026",
     title: "Associate AI Engineer",
     org: "AI Singapore (AIAP)",
     summary:
-      "Delivered a GenAI video generation platform for a global FMCG company as part of a cohort, placing top 6 of 17 projects. Built a custom pipeline on Azure A100 infrastructure, with ComfyUI nodes for image decomposition, multi-provider video generation, and per-job workflow selection, then containerized 5 services across a 4-node GPU cluster with CI/CD. Established human ground truth for the evaluation suite by coordinating batch experiments and annotating 380 videos, benchmarked against VBench and VQA metrics.",
+      "Delivered a GenAI video generation platform for a global FMCG company as part of AISG's 100E programme, placing in the top third of projects. Built a custom video generation workflow on Azure A100 GPUs — ComfyUI nodes for image decomposition, multi-provider video generation behind one interface, per-job workflow selection threaded through the database, API, and routing layers — then containerized 5 services across a 4-node GPU cluster with CI/CD. Established human ground truth for the evaluation suite by coordinating batch experiments and annotating 380 videos, benchmarked against VBench and VQA metrics.",
   },
   {
     period: "Jun 2011 — Apr 2024",
