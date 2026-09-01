@@ -34,6 +34,17 @@ export const posts: BlogPostMeta[] = [
       "A TF-IDF and LogisticRegression classifier wrapped in CI, a hand-written Helm chart, and real Prometheus and Grafana monitoring, built to prove the platform works, not the model. The image dropped from 1.23 GB to 561 MB by cutting MLflow out of the serving runtime, and a stale confidence score in the README sat wrong until a direct check against the live API caught it.",
     tags: ["Kubernetes", "CI/CD", "RocketML"],
   },
+  {
+    slug: "docextract-arithmetic-self-correction",
+    title: "What 35 documents got wrong about arithmetic self-correction",
+    date: "2026-09-01",
+    readTime: "8 min read",
+    project: "docextract",
+    dek: "I gave DocExtract's Anthropic backend a tool to check its own arithmetic during extraction instead of catching the error after, like the existing hard rule does. On a 35-document slice it looked like a clean win. Reran on the full 361-document split, the same N this project already treats as its honest sample size, and the single-call ranking flipped entirely, the tool's real edge shrank to about a third of what the small sample suggested, and it introduced a new failure mode of its own.",
+    summary:
+      "A 35-document eval said self-correction was a clear win over plain extraction. At the full 361-document SROIE split, gemini overtook anthropic as the stronger single-call backend, the self-correcting backend's real edge dropped to +2.5 points, and most of its misses turned out to be the tool reconciling an already-correct total into a wrong one.",
+    tags: ["Evals", "Sample Size", "DocExtract"],
+  },
 ];
 
 export function formatPostDate(date: string): string {

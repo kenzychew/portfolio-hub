@@ -5,10 +5,12 @@ import PostHeader from "@/components/blog/PostHeader";
 import { posts } from "@/lib/blog";
 import GoFetchPost from "@/app/blog/posts/gofetch";
 import RocketMLPost from "@/app/blog/posts/rocketml";
+import DocExtractPost from "@/app/blog/posts/docextract";
 
 const postBodies: Record<string, ComponentType> = {
   "gofetch-rag-pipeline": GoFetchPost,
   "rocketml-serving-pipeline": RocketMLPost,
+  "docextract-arithmetic-self-correction": DocExtractPost,
 };
 
 export function generateStaticParams() {
