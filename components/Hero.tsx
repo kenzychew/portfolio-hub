@@ -39,9 +39,11 @@ export default function Hero() {
           messy or the load spikes, is where I actually spend my time:
           serving it, watching what it does in production, catching problems
           before someone else has to point them out. I picked up that habit
-          shipping a GenAI image-to-video project under AI Singapore&apos;s
-          100E programme, and I&apos;ve kept it up building AI/ML systems on
-          my own since.
+          at AI Singapore&apos;s AIAP, building a GenAI video generation
+          platform for a global FMCG company on Azure GPU infrastructure and
+          owning the MLOps around it &mdash; CI/CD, observability,
+          evaluation. I&apos;ve kept it up since, building and running AI/ML
+          systems of my own, backend to frontend.
         </p>
         <dl className="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-4 lg:justify-start">
           {stats.map((stat) => (
