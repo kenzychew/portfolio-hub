@@ -36,13 +36,13 @@ export default function DocExtractPost() {
         The question, and where the tool sits
       </h2>
       <p className="mb-4 text-[15.5px] leading-relaxed text-fg">
-        DocExtract&apos;s existing pipeline has a hard rule that catches
-        arithmetic errors, line items or a subtotal that don&apos;t
-        reconcile with the stated total, after extraction, and routes the
-        document to manual review no matter how confident the model was. The
-        question I wanted an answer to: would giving the model a tool to
-        check its own arithmetic during extraction let it self-correct and
-        auto-accept documents that currently get punted?
+        DocExtract&apos;s existing pipeline runs a hard rule after
+        extraction: if the subtotal and tax don&apos;t add up to the stated
+        total, or the line items don&apos;t add up to the subtotal, the
+        document gets routed to manual review no matter how confident the
+        model was. The question I wanted an answer to: would giving the
+        model a tool to check its own arithmetic during extraction let it
+        self-correct and auto-accept documents that currently get punted?
       </p>
 
       <Pipeline
@@ -53,7 +53,7 @@ export default function DocExtractPost() {
             name: "validate_arithmetic",
             detail: "agentic backend only, up to 3 rounds",
           },
-          { num: "02", name: "H2 / H3 check", detail: "line items vs. total, existing hard rule" },
+          { num: "02", name: "Reconcile", detail: "subtotal + tax vs. total, line items vs. subtotal" },
           { num: "03", name: "Route", detail: "auto-accept or review" },
         ]}
       />
@@ -108,9 +108,10 @@ export default function DocExtractPost() {
         Roughly a third of the apparent gain survived the rerun. The
         recovery mechanism itself did generalize, 50 documents auto-accepted
         at 361 where <code className={code}>anthropic</code>&apos;s own
-        extraction hard-failed H2 or H3, up from 4 at small scale, so the
-        tool is doing real work. It just isn&apos;t free: 4 of the agentic
-        backend&apos;s 5 critical misses share the same new shape, the tool
+        extraction had failed the reconciliation check, up from 4 at small
+        scale, so the tool is doing real work. It just isn&apos;t free: 4 of
+        the agentic backend&apos;s 5 critical misses share the same new shape,
+        the tool
         reconciling a <code className={code}>total</code> that was already
         correct into a self-consistent but wrong number. On{" "}
         <code className={code}>X51006328967</code> (gold total{" "}
